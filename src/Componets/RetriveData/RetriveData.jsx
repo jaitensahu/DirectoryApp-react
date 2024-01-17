@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 
 const RetriveData = () => {
-  let [retrivedData, setRetrivedDat] = useState([
-    {
-      "Aadhar Number": "2342",
-      Age: "234",
-      "Date of Birth": "2024-01-03",
-      "Mobile Number": "2342",
-      Name: "asda",
-    },
-  ]);
+  let [retrivedData, setRetrivedDat] = useState([]);
   let [adharnum, setAdharNum] = useState(0);
   function getAdharNumber(e) {
     setAdharNum(e.target.value);
