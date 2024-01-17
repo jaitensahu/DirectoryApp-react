@@ -3,7 +3,7 @@ import NewEntry from "../NewEntry/NewEntry";
 
 const AddData = () => {
     let [wantToAdd, setWantToAdd] = useState(false);
-    let [userData, setUserdata] = useState(JSON.parse(localStorage.getItem("userData")));
+    let [userData, setUserdata] = useState(JSON.parse(localStorage.getItem("userData"))!=null? JSON.parse(localStorage.getItem("userData")):[]  );
     function addData() {
         setWantToAdd(true);
     }
