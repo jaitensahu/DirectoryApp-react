@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NewEntry from "../NewEntry/NewEntry";
+import "bootstrap/dist/css/bootstrap.css";
 
 const AddData = () => {
     let [wantToAdd, setWantToAdd] = useState(false);
@@ -16,10 +17,10 @@ const AddData = () => {
         setUserdata(filteredData);
     }
   return (
-    <div>
-      <table className="table">
+    <div className="m-auto" style={{ maxWidth: "1200px" }}>
+      <table className="table-info table">
         <thead>
-          <tr>
+          <tr className="bg-primary">
             <th scope="col">Name</th>
             <th scope="col">Date of birth</th>
             <th scope="col">Aadhar Number</th>
@@ -46,7 +47,9 @@ const AddData = () => {
       {wantToAdd ? (
         <NewEntry setWantToAdd={setWantToAdd} setUserdata={setUserdata} />
       ) : null}
-      <button onClick={addData}>AddData</button>
+      <button className="btn btn-success px-5" onClick={addData}>
+        AddData
+      </button>
     </div>
   );
 };
